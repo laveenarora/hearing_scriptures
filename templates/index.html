@@ -1,0 +1,69 @@
+{% include "header.html" %}
+
+  <!-- second column -->
+<!--  <header class="masthead" style="background-image: url({{ url_for('static', filename='img/home-bg.jpeg')}})">-->
+<div class="carousel_container container-fluid">
+
+  <!-- <div class="row">
+    <div class="col-sm">
+      <img src="images/carousel_background_1.jpg" alt="backgound image">
+    </div> -->
+
+    <!-- <div class="col-sm"> -->
+      <div id="carouselExampleIndicators" class="carousel slide carousel_slides" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+<!--          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
+<!--          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
+<!--          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
+<!--          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>-->
+<!--          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>-->
+        </div>
+        <div class="carousel-inner">
+<!--          <div class="carousel-item active">-->
+<!--            <img src="{{url_for('static', filename='img/carousel_image_1.jpg')}}" class="d-block w-100" alt="First Slide">-->
+<!--          </div>-->
+<!--          <div class="carousel-item">-->
+<!--            <img src="{{url_for('static', filename='img/carousel_image_2.jpg')}}" class="d-block w-100" alt="Second Slide">-->
+<!--          </div>-->
+<!--          <div class="carousel-item">-->
+<!--            <img src="{{url_for('static', filename='img/carousel_image_3.jpg')}}" class="d-block w-100" alt="Third Slide">-->
+<!--          </div>-->
+<!--          <div class="carousel-item">-->
+<!--            <img src="{{url_for('static', filename='img/carousel_image_4.jpg')}}" class="d-block w-100" alt="Third Slide">-->
+<!--          </div>-->
+<!--          <div class="carousel-item">-->
+<!--            <img src="{{url_for('static', filename='img/carousel_image_5.jpg')}}" class="d-block w-100" alt="Third Slide">-->
+<!--          </div>-->
+        </div>
+        <button class="carousel-control-prev carousel_prev_icon" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next carousel_next_icon" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="container-fluid about_us">
+  <div class="row">
+    <div class="col-lg-6">
+      <img src="{{url_for('static', filename='img/books2.jpg')}}" alt="">
+    </div>
+    <div class="col-lg-6">
+      <h3>About Us</h3>
+      <p>..................................</p>
+
+    </div>
+  </div>
+</div>
+
+
+
+{% include "footer.html" %}

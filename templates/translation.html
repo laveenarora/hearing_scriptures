@@ -1,0 +1,32 @@
+{% include "header.html" %}
+
+  <!-- Page Header -->
+
+<div class="subject_layer_1 container-fluid">
+        <div class="col-sm-12 sub_elements_of_subjects">
+
+                <span style ="background-color: #F6E1C3" class="ncert_sub_category_buttons">Translation</span>
+
+        </div>
+</div>
+
+
+  <!-- Main Content -->
+
+    <div class="subject_main_area container-fluid">
+        <div id="displayText"><h6>{{ translation }}</h6></div>
+
+    <script>
+        // Automatically convert text to speech when the page loads
+        window.onload = function() {
+            var textToDisplay = document.getElementById("displayText").textContent;
+
+            // Use the Web Speech API for text-to-speech
+            var textToSpeech = new SpeechSynthesisUtterance(textToDisplay);
+            window.speechSynthesis.speak(textToSpeech);
+        };
+    </script>
+    </div>
+
+
+{% include "footer.html" %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech Demo</title>
+</head>
+<body>
+    <h1>Text-to-Speech Demo</h1>
+    <button id="displayTextButton">Display Text</button>
+
+    <div id="displayText" style="display: none;"></div>
+
+    <script>
+        document.getElementById("displayTextButton").addEventListener("click", function() {
+            // Display text on the page
+            document.getElementById("displayText").textContent = "Hello, I am here!";
+            document.getElementById("displayText").style.display = "block";
+
+            // Use the Web Speech API for text-to-speech
+            var textToSpeech = new SpeechSynthesisUtterance("Hello, I am here!");
+            window.speechSynthesis.speak(textToSpeech);
+        });
+    </script>
+</body>
+</html>
