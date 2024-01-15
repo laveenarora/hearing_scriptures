@@ -9,12 +9,12 @@ class Text():
 
     def bhagavatam(canto, chapter, sloka):
 
-
+        headers = {'User-Agent': 'Your User Agent String'}
 
         link = f'https://vedabase.io/en/library/sb/{canto}/{chapter}/{sloka}/'
 
         try:
-            response = requests.get(link, timeout=30)
+            response = requests.get(link, headers=headers, timeout=30)
             response.raise_for_status()
         except requests.RequestException as e:
             return f"Error making HTTP request: {e}"
