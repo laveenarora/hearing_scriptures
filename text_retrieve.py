@@ -13,7 +13,13 @@ class Text():
 
         link = f'https://vedabase.io/en/library/sb/{canto}/{chapter}/{sloka}/'
 
-        response = requests.get(link, timeout=30)
+        try:
+            response = requests.get(link, timeout=30)
+            response.raise_for_status()
+        except requests.RequestException as e:
+            return f"Error making HTTP request: {e}"
+        except Exception as e:
+            return f"Error: {e}"
 
         vedabase_pg = response.text
 
