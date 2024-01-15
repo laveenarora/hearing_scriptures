@@ -13,7 +13,7 @@ class Text():
 
         link = f'https://vedabase.io/en/library/sb/{canto}/{chapter}/{sloka}/'
 
-        response = requests.get(link)
+        response = requests.get(link, timeout=30)
 
         vedabase_pg = response.text
 
